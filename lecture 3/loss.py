@@ -1,0 +1,41 @@
+import numpy as np
+
+
+def hinge_loss(X,Y,W,delta,threshold):
+	# param : X  train sample 
+	#			 Y	 train label
+	#			 W  Weight matrix
+	#		delta  margin you want to take
+	# threshold  threshold above which you activate
+	# returns:  the cross entropy loss 
+
+	return np.sum(np.max(0,scores-scores[Y]+delta)) 
+
+def cross_entropy(X,Y,W):
+	# param : X  train sample 
+	#			 Y	 train label
+	#			 W  Weight matrix
+	# returns:  the cross entropy loss 
+
+	scores=np.dot(W,X)
+	p=np.exp(scores[Y])/np.sum(np.exp(scores)) #may not work sometimes because of exp blowup
+	scores=scores-np.max(scores)	#use this , as this wont blowup
+	p=np.exp(scores[Y])/np.sum(np.exp(scores))
+	return p
+
+def L_i(X,Y,W):
+	loss_i= hinge_loss(X,Y,W,1,0) 
+	return loss_i
+
+def reglurization(W,alpha):
+	#L2 reg
+	#L1 reg
+
+def total_loss(X,Y,W):
+	l=0
+	for i in xrange(len(train):
+		l+=L_i(train['data'],train['label'],W)
+	l=l/len(data)
+	return l+regularization(W,alpha)
+	
+
