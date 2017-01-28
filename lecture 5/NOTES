@@ -1,0 +1,11 @@
+
+Summary : 
+This this what we studied
+
+****IMPORTANT***
+Activation Function ( ReLu )
+Data Preprocessing ( mean substraction )
+Weight Initialization ( Xavier unit )
+Batch Normalization ( use this )
+Babysitting the Learning process
+Hyperparameter Optimization
